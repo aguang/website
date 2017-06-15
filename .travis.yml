@@ -1,9 +1,23 @@
-env:
-  global:
-    - secure: 38c9a08437de3e4d5194d18ae71e92f8767f16a9
-  matrix:
-    - USE_NETWORK=true
-    - USE_NETWORK=false
+install:
+  - gem install jekyll
+
+before_script:
+  - COMMIT_MESSAGE="Publishing site on `date "+%Y-%m-%d %H:%M:%S"` from
+    `git log -n 1 --format='commit %h - %s'`"
+
+script:
+  - set -e
+  - make # Or jekyll build or whatever command you use to generate your site
+  - git checkout -b master # Replace master with gh-pages if applicable
+  - git add -f _site/ # Replace _site/ with the build's output directory
+  - 'git commit -m "${COMMIT_MESSAGE}"'
+  - git filter-branch -f --subdirectory-filter _site/ # Again, replace _site/
+  # Obviously, replace with your repo's SSH URL and the appropriate branch
+  - git push -f YOUR_REPOS_SSH_URL master:master
+
+branches:
+  only:
+    - source
 
 deploy:
   provider: pages
