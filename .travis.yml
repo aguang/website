@@ -1,3 +1,7 @@
+language: ruby
+rvm:
+  - 2.2
+
 install:
   - gem install jekyll
 
@@ -13,7 +17,7 @@ script:
   - 'git commit -m "${COMMIT_MESSAGE}"'
   - git filter-branch -f --subdirectory-filter _site/ # Again, replace _site/
   # Obviously, replace with your repo's SSH URL and the appropriate branch
-  - git push -f YOUR_REPOS_SSH_URL master:master
+  - git push -f git@github.com:aguang/aguang.github.io.git master:master
 
 branches:
   only:
