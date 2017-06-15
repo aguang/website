@@ -1,0 +1,13 @@
+env:
+  global:
+    - secure: 38c9a08437de3e4d5194d18ae71e92f8767f16a9
+  matrix:
+    - USE_NETWORK=true
+    - USE_NETWORK=false
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  on:
+    branch: master
