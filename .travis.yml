@@ -4,6 +4,7 @@ rvm:
 
 install:
   - gem install jekyll
+  - bundle install
 
 before_script:
   - COMMIT_MESSAGE="Publishing site on `date "+%Y-%m-%d %H:%M:%S"` from
@@ -11,7 +12,7 @@ before_script:
 
 script:
   - set -e
-  - make # Or jekyll build or whatever command you use to generate your site
+  - bundle exec jekyll serve
   - git checkout -b master # Replace master with gh-pages if applicable
   - git add -f _site/ # Replace _site/ with the build's output directory
   - 'git commit -m "${COMMIT_MESSAGE}"'
