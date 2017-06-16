@@ -14,12 +14,12 @@ script:
   - bundle exec jekyll build
   - git checkout -b master # Replace master with gh-pages if applicable
   - git add -f _site/ # Replace _site/ with the build's output directory
-  - git config --global user.email "august.guang@gmail.com"
-  - git config --global user.name "August Guang"
+  - git config --global user.email "travis@travis-ci.org"
+  - git config --global user.name "Travis"
   - 'git commit -m "${COMMIT_MESSAGE}"'
   - git filter-branch -f --subdirectory-filter _site/ # Again, replace _site/
   # Obviously, replace with your repo's SSH URL and the appropriate branch
-  - git push -f git@github.com:aguang/aguang.github.io.git master:master
+  - git push -f git@github.com:aguang/aguang.github.io.git
 
 branches:
   only:
