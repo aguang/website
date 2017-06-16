@@ -11,15 +11,8 @@ before_script:
 
 script:
   - set -e
-  - bundle exec jekyll build
+  - bundle exec rake site:deploy
 
 branches:
   only:
     - source
-
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
-  on:
-    branch: master
