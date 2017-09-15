@@ -1,0 +1,20 @@
+language: ruby
+rvm:
+  - 2.2
+
+install:
+  - bundle install
+
+before_script:
+  - COMMIT_MESSAGE="Publishing site on `date "+%Y-%m-%d %H:%M:%S"` from
+    `git log -n 1 --format='commit %h - %s'`"
+
+script:
+  - make check
+  - make generate
+
+after_success:
+  - bash deploy.sh
+env:
+  global:
+    - secure: $GITHUB_TOKEN
