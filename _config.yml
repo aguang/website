@@ -13,9 +13,9 @@ title                    : "August Guang"
 title_separator          : "-"
 name                     : "August Guang"
 description              : "PhD Candidate in Applied Mathematics and Computational Biology at Brown."
-url                      : "augustguang.com"
+url                      : #"augustguang.com"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : aguang/aguang.github.io
+repository               : aguang/website
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
