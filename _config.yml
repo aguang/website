@@ -9,7 +9,7 @@ minimal_mistakes_skin    : "default" # "air", "contrast", "dark", "dirt", "mint"
 
 # Site Settings
 locale                   : "en"
-title                    : "Site Title"
+title                    : "August Guang"
 title_separator          : "-"
 name                     : "August Guang"
 description              : "PhD Candidate in Applied Mathematics and Computational Biology at Brown."
@@ -79,10 +79,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "August Guang"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
+  bio              : "PhD Candidate in Applied Mathematics and Computational Biology"
+  location         : "Providence, RI"
   email            :
   uri              :
   bitbucket        :
