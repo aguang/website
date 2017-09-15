@@ -10,9 +10,11 @@ before_script:
     `git log -n 1 --format='commit %h - %s'`"
 
 script:
-  - set -e
-  - bundle exec rake site:deploy
+  - make check
+  - make generate
 
-branches:
-  only:
-    - source
+after_success:
+  - bash deploy.sh
+env:
+  global:
+    - secure: $GITHUB_TOKEN
