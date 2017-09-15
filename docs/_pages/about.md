@@ -42,7 +42,7 @@ Minimal Mistakes is a flexible two-column Jekyll theme. Perfect for hosting your
 | [Post with a Gallery][gallery-post] | A post showing several images wrapped in `<figure>` elements. |
 | [Sample Collection Page][sample-collection] | Single page from a collection. |
 | [Categories Archive][categories-archive] | Posts grouped by category. |
-| [Tags Archive][tags-archive] | Posts grouped by tags. |
+| [Tags Archive][tags-archive] | Posts grouped by tag. |
 
 For even more demo pages check the [posts archive][year-archive].
 
@@ -62,18 +62,18 @@ For even more demo pages check the [posts archive][year-archive].
 ### Icons + Demo Images:
 
 - [The Noun Project](https://thenounproject.com) -- Garrett Knoll, Arthur Shlain, and [tracy tam](https://thenounproject.com/tracytam)
-- [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
+- [Font Awesome](http://fontawesome.io/)
 - [Unsplash](https://unsplash.com/)
 
 ### Other:
 
-- [Jekyll](http://jekyllrb.com/)
-- [jQuery](http://jquery.com/)
+- [Jekyll](https://jekyllrb.com/)
+- [jQuery](https://jquery.com/)
 - [Susy](http://susy.oddbird.net/)
 - [Breakpoint](http://breakpoint-sass.com/)
 - [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/)
 - [FitVids.JS](http://fitvidsjs.com/)
-- Greedy Navigation - [lukejacksonn](http://codepen.io/lukejacksonn/pen/PwmwWV)
+- Greedy Navigation - [lukejacksonn](https://codepen.io/lukejacksonn/pen/PwmwWV)
 - [jQuery Smooth Scroll](https://github.com/kswedberg/jquery-smooth-scroll)
 
 ---
