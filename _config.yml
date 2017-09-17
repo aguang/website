@@ -80,18 +80,18 @@ analytics:
 # Site Author
 author:
   name             : "August Guang"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "PhD Candidate in Applied Mathematics and Computational Biology"
+  avatar           : "/assets/img/oregon2.jpg"
+  bio              : "PhD Candidate in Applied Mathematics and Computational Biology @ Brown University"
   location         : "Providence, RI"
-  email            :
+  email            : "august_guang@brown.edu"
   uri              :
-  bitbucket        :
+  bitbucket        : "aguang"
   codepen          :
   dribbble         :
   flickr           :
   facebook         :
   foursquare       :
-  github           : [metadata]
+  github           : "aguang"
   gitlab           :
   google_plus      :
   keybase          :
@@ -243,7 +243,18 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
+      read_time: false
+      comments: # true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      read_time: false
       comments: # true
       share: true
       related: true
