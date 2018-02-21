@@ -13,7 +13,7 @@ locale                   : "en-US"
 title                    : "August Guang"
 title_separator          : "-"
 name                     : "August Guang"
-description              : "PhD Candidate in Applied Mathematics and Computational Biology at Brown."
+description              : "Genomics Data Scientist at Brown."
 url                      : #"augustguang.com"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : aguang/website
