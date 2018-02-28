@@ -3,6 +3,6 @@ title: About Me
 permalink: /about/
 ---
 
-August Guang, 6th-year PhD Student in Applied Mathematics and Computational Biology at Brown. I study uncertainty in phylogenetic workflows with an application to HIV transmission inference. Currently looking for research positions in industry or academia.
+August Guang, Genomics Data Scientist @ [Brown University's Computational Biology Core](https://www.brown.edu/research/projects/computational-biology-of-human-disease/) and Healing Coordinator @ [Providence Youth Student Movement](http://prysm.us).
 
-I also do community organizing, previously as the Queer Justice Coordinator and more recently as a Healing Process Coordinator with the [Providence Youth Student Movement](http://prysm.us), a youth-led organization dedicated to ending state, street, and interpersonal violence within the Southeast Asian community in Providence.
+I obtained my PhD in Applied Mathematics and Computational Biology from Brown University in 2017. My primary research interest is in quantifying uncertainty; my dissertation was on uncertainty in phylogenetic workflows with an application to HIV transmission inference. In a way, that is also my motivation and mantra in community organizing: becoming comfortable with uncertainty and always pushing for change.
