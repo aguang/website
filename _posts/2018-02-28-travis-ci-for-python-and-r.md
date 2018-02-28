@@ -4,8 +4,6 @@ classes: wide
 toc: true
 ---
 
-## Introduction
-
 I have been using [Travis-CI](travis-ci.org) for about a year or two now, and now that I've got it working pretty smoothly and know how to debug it I quite like it. Combined with [codecov](https://codecov.io/) it gives some of that RPG level-up satisfaction every time I see my code coverage badge increase and my build pass.
 
 {% include base_path %}
