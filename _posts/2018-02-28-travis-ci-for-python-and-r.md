@@ -73,7 +73,7 @@ install:
 
 After `test-env` is activated, to install packages just run `conda install -c $channel $package` or `pip install $package` as usual. To learn more about that, take a look [here](https://conda.io/docs/user-guide/tasks/manage-pkgs.html). Best practices are to install everything from conda if possible once you've set up a conda environment, but sometimes packages don't have conda recipes, or sometimes they conflict, so what can you do.
 
-To take a look at my `.travis.yml` with a conda environment and subsequent build log for a passing commit, you can look [here](https://github.com/aguang/transmissim/blob/5a7d9b8c98025029b2af279f6380609b37ced5ca/.travis.yml) and [here](https://travis-ci.org/aguang/transmissim/jobs/309341101). It includes some additional stuff in the `before_script` for running a pre-compiled executable, `pytest` and `codecov` but otherwise is basically the same. Ironically my current build is no longer passing however due to what appears to be issues with the `.travis.yml` file, which leads us to...
+To take a look at my `.travis.yml` with a conda environment and subsequent build log for a passing commit, you can look [here](https://github.com/aguang/transmissim/blob/b634f6009c42c2820da75fda2e46a60fef55f848/.travis.yml) and [here](https://travis-ci.org/aguang/transmissim/jobs/347627528). It includes some additional stuff in the `before_script` for running a pre-compiled executable, `pytest` and `codecov` but otherwise is basically the same. Ironically while re-testing this today my current build started failing due to what appeared to be issues with the `.travis.yml` file, which leads us to...
 
 ## Debugging Travis with Docker
 
@@ -123,4 +123,4 @@ Python 3.4.6
 (python3.4.6) travis@57726524d0db:~/transmissim$ 
 ~~~
 
-So, now run all of the commands in the job log, figure out where your error is in your `.travis.yml` file, and fix it. Easy peasy, theoretically. :) In reality I'm still trying to figure out why I have so many dependency conflicts. :)))
+So, now run all of the commands in the job log, figure out where your error is in your `.travis.yml` file, and fix it. Easy peasy, theoretically. :) In reality I'm often still spending quite a while trying to figure out why I have so many dependency conflicts. :))) For today's case it ultimately ended up being that `conda install -c bioconda dendropy` only gives `dendropy/4.2.0` while `pip install dendropy` gives `dendropy/4.3.0`, and there's a bug that affects our code which was resolved in `dendropy/4.3.0`. But that's fixed now, so all's well that end's well.
