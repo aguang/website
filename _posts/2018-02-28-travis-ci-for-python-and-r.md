@@ -17,7 +17,7 @@ I have been using [Travis-CI](travis-ci.org) for about a year or two now, and no
   <figcaption>The literal face and hand motions I've made when my Travis-CI builds finally passed.</figcaption>
 </figure>
 
-It's also more importantly a good indicator for others that your code is probably not be a hot mess and a half. However, it was the bane of my existence for a good 6 months while I was in the last stretch of my PhD. I spent more time debugging Travis than actually working on my code. ([transmissim](https://github.com/aguang/transmissim), simulations for HIV epidemics that include intra-host evolution) This is probably because I jumped into the deep end with code that relied on python, R, *and* C++ packages and pre-compiled binaries. Based on my lab's experience with Travis though, I also do think that as your project scales up, and as Travis continues to make changes that it can cause quite a lot of errors that are a pain to debug.
+It's also more importantly a good indicator for others that your code is probably not a hot mess and a half. However, it was the bane of my existence for a good 6 months while I was in the last stretch of my PhD. I spent more time debugging Travis than actually working on my code. ([transmissim](https://github.com/aguang/transmissim), simulations for HIV epidemics that include intra-host evolution) This is probably because I jumped into the deep end with code that relied on python, R, *and* C++ packages and pre-compiled binaries. Based on my lab's experience with Travis though, I also do think that as your project scales up, and as Travis continues to make changes that it can cause quite a lot of errors that are a pain to debug.
 
 There's a lot of good guides on setting up Travis for a single language, and in my experience it isn't too rough. So here I'll just add to the mix some of my experiences with trying to set up Travis for multiple languages, in particular python and R, and subsequent debugging in Docker. Multiple language support for Travis probably isn't going to happen any time soon according to [this open issue](https://github.com/travis-ci/travis-ci/issues/4090) but it's obviously still possible, just a little more involved.
 
@@ -38,7 +38,7 @@ I find this kind of annoying, as [apparently](https://stackoverflow.com/question
 
 ## Travis on multiple languages
 
-OK, let's say you're me and want to write some code that takes advantage of both R packages and python packages. These packages are specialized enough (say, for molecular evolution and epidemiological transmission) that you haven't been able to find equivalents in either language, and you also don't want to spend time retooling packages when it probably won't contribute towards your publications or PhD. You know how it is. So you decide to throw them together with the help of [rpy2](https://rpy2.bitbucket.io/), an interface to R from python.
+OK, let's say you're me and want to write some code that takes advantage of both R packages and python packages. These packages are specialized enough that you haven't been able to find equivalents in either language, and you also don't want to spend time retooling packages when it probably won't contribute towards your publications or PhD. You know how it is. So you decide to throw them together with the help of [rpy2](https://rpy2.bitbucket.io/), an interface to R from python.
 
 Since we are primarily calling R from python, we set up our `.travis.yml` file with the python language and a python3-only [build matrix](https://docs.travis-ci.com/user/customizing-the-build/#Build-Matrix):
 
@@ -52,7 +52,7 @@ python:
 
 You can of course add additional python versions if you'd like as well as a nightly build. In this particular case Travis will create 3 containers with python3.4, python3.5, and python3.6 respectively for us and build and test our code on each. Since the builds are all in Ubuntu, in order to also get R on the system if you were sudo-enabled you would just run `sudo apt-get`. In a container-based environment, however, you need to follow Travis-CI's guide on [Adding APT Sources and Packages](https://docs.travis-ci.com/user/installing-dependencies/#Installing-Packages-on-Container-Based-Infrastructure).
 
-There is however yet another option, and that is to use a conda environment.
+Personally I have found this somewhat difficult to parse and work out. There is however yet another option, and that is to use a conda environment.
 
 ### conda and Travis
 
