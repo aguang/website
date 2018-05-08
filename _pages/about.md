@@ -1,6 +1,8 @@
 ---
 title: About Me
 permalink: /about/
+header:
+    image: /assets/img/spring_pvd.jpg
 ---
 
 August Guang, Genomics Data Scientist @ [Brown University's Computational Biology Core](https://www.brown.edu/research/projects/computational-biology-of-human-disease/) and Healing Coordinator @ [Providence Youth Student Movement](http://prysm.us).
