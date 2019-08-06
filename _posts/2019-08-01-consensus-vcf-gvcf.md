@@ -3,6 +3,7 @@ title: Building a consensus sequence with vcf files
 draft: false
 categories: ["posts"]
 tags: ["vcfs","gatk","bcftools","phylogenies"]
+classes: wide
 ---
 
 Note: this post has also been [cross-posted](https://cbc.brown.edu/blog/consensus-vcf/) to the Center for Computational Biology of Human Disease at Brown, where I currently work. References to Oscar and CBC have to do with our computing cluster (named Oscar) and the shorthand for our center (CBC).
