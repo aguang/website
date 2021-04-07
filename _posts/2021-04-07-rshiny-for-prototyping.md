@@ -3,6 +3,7 @@ title: RShiny for prototyping + plotting two different user-input variables
 draft: false
 categories: ["posts"]
 tags: ["rshiny", "webapps", "software engineering"]
+classes: wide
 ---
 
 Last week after some team meetings I started using RShiny to prototype a webapp for a project I'm working on to show users how many resources (i.e. time, memory, CPUs) they might need for running various bioinformatics programs on our computing cluster. This was after several projects we had were stalled out on the public-facing piece due to our single front-end developer leaving and the rest of our collective lack of experience. There was one app, [RefChef](https://compbiocore.github.io/refchef-ember/#/references), built with React/Ember, and a few others had been started in Vue/Nuxt. None of us had done anything in Javascript (I had done a little d3 before but it was more of the copy d3 examples and adjust values type) and certainly not any JS frameworks. The learning curve turned out to be pretty big given that software engineering tends to be our last priority and research/analyses our first priority - several months later I still haven't quite been able to combine existing components into a working interactive page.
