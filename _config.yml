@@ -194,6 +194,7 @@ timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 # Plugins (previously gems:)
 plugins:
+  - jekyll-include-cache
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
@@ -268,5 +269,16 @@ defaults:
       author_profile: true
       read_time: false
       comments: # true
+      share: true
+      related: true
+# _posts
+  - scope:
+      path: ""
+      type: running
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
       share: true
       related: true

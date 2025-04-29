@@ -69,7 +69,7 @@ DimPlot(intdat_minimal, reduction="umap", split.by="anon.ident") + theme(legend.
 
 {% capture fig_img2 %}
 ![UMAP of integration with 2000 features]({{ basepath }}/assets/img/2025-04-09-spatial/less.png)
-{% endcapture}
+{% endcapture %ß}
 
 <figure>
   {{ fig_img2 | markdownify | remove: "<p>" | remove: "</p>" }}
@@ -91,7 +91,7 @@ Visually, it seems like 3000 features achieves the best consistency on this data
 
 The general sense I get is that using too little features and too many features could be a problem, as one might expect, but somewhere in-between seems to be fine. And at least on this dataset the standard suggested in the vignette of 3000 features also works fine. I'm not sure and have not explored what downstream impacts this has, but I doubt they are large - rather, the number of features should probably be more like a QC check to see that you have not used too few nor too many. Choice of clustering parameters of course have great impact and have much more research dedicated to them as a result, as discussed in [Menon et al. 2021](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-021-03957-4), [Wong et al. 2023](https://pmc.ncbi.nlm.nih.gov/articles/PMC10158997/). There was also [this nice paper](https://www.nature.com/articles/s41467-019-13056-x) that I used as a guide for some of my own explorations with tSNE parameters, although those only affect visualization.
 
-{% capture fig_img3 %}
+{% capture fig_imgr %}
 ![UMAP of integration with 500 features]({{ basepath }}/assets/img/2025-04-09-spatial/max.png)
 {% endcapture %}
 
